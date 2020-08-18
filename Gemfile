@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
  gem 'better_errors'
  gem 'pry-rails'
  gem 'annotate'
+ gem 'jquery-rails'
+ gem 'binding_of_caller'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
