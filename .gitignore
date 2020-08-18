@@ -6,3 +6,6 @@
 /tmp
 npm-debug.log
 /log
+
+/.bundle
+bundle.js*
