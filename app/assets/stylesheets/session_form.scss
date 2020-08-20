@@ -1,0 +1,57 @@
+.login-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 35%;
+    background-color:#36393f;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.login-header{
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.signup-header{
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.session-form{
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+}
+.username-box{
+    width: 95%;
+    height: 100%;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+.password-box{
+    width: 95%;
+    height: 100%;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+.submit-button{
+    background-color:#73AADD;
+    color: white;
+    width: 98%;
+    font-size: 15px;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
