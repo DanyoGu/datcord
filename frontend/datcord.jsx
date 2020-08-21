@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { signup } from "./actions/session_actions";
 import { login } from "./actions/session_actions";
 import { logout } from "./actions/session_actions";
+import { fetchServer, fetchServers, createServer, updateServer, deleteServer } from "./util/server_api_util";
 import configureStore from './store/store';
 // import App from './components/App';
 import Root from './components/root';
@@ -10,8 +11,14 @@ import Root from './components/root';
   window.signup = signup;
   window.login = login;
   window.logout = logout;
+  document.addEventListener("DOMContentLoaded", () => {
+    
+  window.fetchServer = fetchServer;
+  window.fetchServers = fetchServers;
+  window.createServer = createServer;
+  window.updateServer = updateServer;
+  window.deleteServer = deleteServer;
 
-document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store;
   if (window.currentUser) {
