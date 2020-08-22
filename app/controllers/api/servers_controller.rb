@@ -6,9 +6,12 @@ class Api::ServersController < ApplicationController
     end
     
     def show
-        @server = get_all_servers(current_user).find_by(id: params[:id])
-       
-        render "api/servers/show"
+        @server = Server.find_by(id: params[:id])
+        if get_all_servers(current_user).include?(@server)
+            render "api/servers/show"
+        else
+            render json:["Server not found"], status: 422
+        end
     end
     
     def create
@@ -36,8 +39,7 @@ class Api::ServersController < ApplicationController
         @server = Server.find(params[:id])
         if @server.owner_id == current_user.id
             @server.destroy
-            render "api/servers/index"
-        else @server.owner_id != current_user.id
+        else 
             render json:["User must be owner to chirps"], status: 422
         end 
     end

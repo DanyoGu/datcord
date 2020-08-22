@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    // font-family: ;
+}
+// body {
+//     background: ;
+// }
+.wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.wrapper .sidebar {
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    // background: ;
+    padding: 30px 0;
+}
+.wrapper .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+}
+.wrapper .sidebar ul li:hover {
+    background: grey;
+}
+.wrapper .main-content {
+    width: 100%;
+    margin-left: 100px;
+}
