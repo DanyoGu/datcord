@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
       resource :user, only: [:create]
       resource :session, only: [:create, :destroy, :show]
-      resources :servers, only: [:index, :create, :destroy, :update, :show]
+      resources :servers, only: [:index, :create, :destroy, :update, :show, :join, :leave] do
+        resources :channels, only: [:index, :create, :show]
+      end
       resources :memberships, only: [:create, :destroy]
   end
+
+  post 'api/servers/join/:invite_code', to: 'api/servers#join'
+  delete 'api/servers/leave/:id', to: 'api/servers#leave'
   root to:'static_pages#root'
   
 end

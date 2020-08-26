@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createServer } from '../../actions/server_actions';
-import ServerForm from './server_form';
+import CreateServerForm from './create_server_form';
 
 const mapStateToProps = (state) => {
     const session = state.session;
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => ({
     processForm: server => dispatch(createServer(server))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ServerForm)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateServerForm)

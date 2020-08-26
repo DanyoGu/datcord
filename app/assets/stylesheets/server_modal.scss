@@ -1,0 +1,61 @@
+.create-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px;
+    border: none;
+    border-radius: 5px;
+}
+.join-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px;
+    border: none;
+    border-radius: 5px;
+}
+.create-header{
+    display: flex;
+    justify-content: center;
+    color: #7289DA;
+    font-weight: 900;
+    font-size: 20px;
+    
+}
+.join-header{
+    display: flex;
+    justify-content: center;
+    color: #43B581;
+    font-weight: 900;
+    font-size: 20px;
+    
+}
+.join-message{
+    text-align: center;
+    color: #747F8D;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.server-name{
+    color: black;
+    font-weight: 600;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.server-name-box{
+    font-size: 1.5em;
+    height: 50px;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px black;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid rgb(155, 155, 155);
+}

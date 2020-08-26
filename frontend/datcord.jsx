@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { signup } from "./actions/session_actions";
 import { login } from "./actions/session_actions";
 import { logout } from "./actions/session_actions";
-import { requestServers, requestServer, createServer, updateServer, deleteServer } from "./actions/server_actions";
+import { requestServers, requestServer, createServer, updateServer, deleteServer, joinServer, leaveServer } from "./actions/server_actions";
+import { requestChannels, requestChannel, createChannel } from "./actions/channel_actions";
 import configureStore from './store/store';
 // import App from './components/App';
 import Root from './components/root';
@@ -17,6 +18,13 @@ import Root from './components/root';
   window.createServer = createServer;
   window.updateServer = updateServer;
   window.deleteServer = deleteServer;
+  window.joinServer = joinServer;
+  window.leaveServer = leaveServer;
+
+  window.requestChannels = requestChannels;
+  window.requestChannel = requestChannel;
+  window.createChannel = createChannel;
+
   
   document.addEventListener("DOMContentLoaded", () => {
     
