@@ -19,7 +19,7 @@
 .wrapper .sidebar {
     position: absolute;
     width: 75px;
-    height: 1000px;
+    height: 100vh;
     // background: ;
     padding: 30px 0;
     background-color: #202225;
@@ -138,6 +138,14 @@ html {
 .discord-logo{
   padding-left: 8px;
   margin-top: 10px;
-  color: white;
-  font-weight: 700;
+  color: gray;
+  font-weight: 900;
+}
+.create-server-modal:focus{
+  outline: none;
+  border: none;
+}
+.server-name-box:focus{
+  outline: none;
+
 }

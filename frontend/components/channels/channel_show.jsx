@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import MessageFormContainer from "../messages/message_form_container";
+import { useStore } from 'react-redux';
 
 class ChannelShow extends React.Component {
     constructor(props) {
@@ -45,14 +46,24 @@ class ChannelShow extends React.Component {
         const messages = this.props.messages.map(message => {
             return (
                 <li className="message" key={message.id}>
-                    {message.author}: {message.body}
+                    <img src="discord-logo.png" alt="justin goes here"/>
+                    <div className="whole-message">
+                        <div className="message-author-date">
+                            <h3>{message.author}</h3>
+                            <p>11/18/1997</p>
+                        </div>
+                        <div className="message-body">
+                            {message.body}
+                        </div>
+                         
+                    </div>
                 </li>
             )
         })
 
         return (
             <div className="messages-bar">
-                <h1>Channel Name: {channel.channel_name}</h1>
+                <h1 className="channel-header"># {channel.channel_name}</h1>
                 <div className="message-list">
                     {messages}
                 </div>
