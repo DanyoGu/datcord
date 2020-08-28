@@ -29,7 +29,7 @@ class CreateServerForm extends React.Component{
     render () {
         return (
           <div className="whole-server-form">
-            <h1 className="create-header">CREATE YOUR DISCORD SERVER</h1>
+            <h1 className="create-header">CREATE YOUR DATCORD SERVER</h1>
             <br />
             <span className="create-message">
               Make a place for you to hang out with your communities and
