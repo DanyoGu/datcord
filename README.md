@@ -92,6 +92,7 @@ class CreateServerForm extends React.Component{
 
 ### Live Chat
 Live chat feature is available in every channel of every server. Individual channels have individual chat rooms that allow users to interact with one another in real time
+
 ![alt text](https://im2.ezgif.com/tmp/ezgif-2-8d7eaf92c920.gif)
 
 ```
