@@ -1,0 +1,23 @@
+
+.wrapper .messages-bar {
+    position: absolute;
+    top: 0;
+    width: 1300px;
+    height: 100%;
+    margin-left: 175px;
+    text-align: left;
+    color: white;
+    background-color:#36393F;
+    padding: 20px 0;
+}
+.message-list {
+  overflow-y: scroll;
+  height: 300px;
+  width: 400px;
+  border: solid gray 1px;
+}
+.load-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

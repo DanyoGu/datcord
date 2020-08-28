@@ -25,6 +25,9 @@ class User < ApplicationRecord
     has_many :joined_servers,
         through: :memberships,
         source: :server
+    has_many :written_messages,
+        through: :author_id,
+        class_name: :Message
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(username, password)

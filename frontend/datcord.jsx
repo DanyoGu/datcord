@@ -5,6 +5,7 @@ import { login } from "./actions/session_actions";
 import { logout } from "./actions/session_actions";
 import { requestServers, requestServer, createServer, updateServer, deleteServer, joinServer, leaveServer } from "./actions/server_actions";
 import { requestChannels, requestChannel, createChannel } from "./actions/channel_actions";
+import { requestMessages,  createMessage } from "./actions/message_actions";
 import configureStore from './store/store';
 // import App from './components/App';
 import Root from './components/root';
@@ -24,6 +25,9 @@ import Root from './components/root';
   window.requestChannels = requestChannels;
   window.requestChannel = requestChannel;
   window.createChannel = createChannel;
+
+  window.requestMessages = requestMessages;
+  window.createMessage = createMessage;
 
   
   document.addEventListener("DOMContentLoaded", () => {

@@ -7,10 +7,11 @@ Rails.application.routes.draw do
         resources :channels, only: [:index, :create, :show]
       end
       resources :memberships, only: [:create, :destroy]
+      resources :messages, only: [:create, :index]
   end
 
   post 'api/servers/join/:invite_code', to: 'api/servers#join'
   delete 'api/servers/leave/:id', to: 'api/servers#leave'
   root to:'static_pages#root'
-  
+  mount ActionCable.server, at: '/cable'
 end

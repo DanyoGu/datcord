@@ -1,0 +1,66 @@
+.wrapper .channel-bar{
+    position: absolute;
+    height: 1000px;
+    width: 35%;
+    margin-left: 75px;
+    color: white;
+    background-color:#2E3136;
+    border-radius: 15px 0px 0px 0px;
+
+}
+.server-title{
+
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 2px solid rgb(39, 39, 39);
+}
+.channel-links-lis{
+
+    padding: 10px;
+}
+.channel-links{
+    color: #72767D;
+    font-weight: 500;
+    font-size: 17px;
+}
+.channel-links-lis:hover {
+    background-color: #393C43;
+    border-radius: 10px;
+    width: 160px;
+    
+}
+.channel-links:hover{
+    color: white;
+}
+.channel-create-li{
+
+    padding: 10px;
+}
+.channel-create-li:hover{
+    background-color: #393C43;
+    border-radius: 10px;
+    width: 160px;
+}
+.channel-links-container{
+    padding-left: 5px;
+    padding-top: 10px;
+}
+.channel-bar .invite-code{
+    padding-left: 11px;
+    padding-top: 15px;
+}
+.channel-create-box{
+    padding-left: 0px;
+    padding-top: 10px;
+}
+.homelink{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.logoutlink{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}

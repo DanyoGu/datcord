@@ -43,29 +43,32 @@ class ServerIndex extends React.Component {
 
         return (
           <div className="wrapper">
+            <div className='top-bar'>
+              <span className="discord-logo">DATCORD</span>
+            </div>
             <div className="sidebar">
               <ul>
                 <li className="home-link">
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="homelink">⌂</Link>
                 </li>
                 {servers.map((server) => (
                   <li key={server.id} className="tooltip">
-                    <Link to={`/servers/${server.id}`}>{server.server_name.charAt(0)}</Link>
+                    <Link to={`/servers/${server.id}`} className="server-link">{server.server_name.charAt(0)}</Link>
                     <span className="tooltiptext">{server.server_name}</span>
                   </li>
                 ))}
                 <div className="server-create-box">
                   <li>
-                    <button
+                    <div
                       className="create-server-button"
                       onClick={this.toggleCreateModal}
                     >
                       +
-                    </button>
+                    </div>
                   </li>
 
                   <Modal
-                    className="create-modal"
+                    className="create-server-modal"
                     isOpen={this.state.showCreateModal}
                     onRequestClose={this.toggleCreateModal}
                     ariaHideApp={false}
@@ -98,12 +101,12 @@ class ServerIndex extends React.Component {
                 </div>
                 <div className="server-join-box">
                   <li>
-                    <button
+                    <div
                       className="add-server-button"
                       onClick={this.toggleJoinModal}
                     >
                       +++
-                    </button>
+                    </div>
                   </li>
 
                   <Modal
@@ -142,12 +145,11 @@ class ServerIndex extends React.Component {
                 </div>
 
                 <li>
-                  <Link to="/logout">Logout</Link>
+                  <Link to="/logout" className="logoutlink">⇦</Link>
                 </li>
               </ul>
             </div>
-              <div className="channel-bar">
-                <h1>Channel Div</h1>
+              <div>
                 <ProtectedRoute path="/servers/:serverId" component={ServerShowContainer} />
               </div>
           </div>

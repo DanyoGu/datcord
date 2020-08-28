@@ -1,18 +1,13 @@
 import { connect } from "react-redux";
-import { requestChannels, createChannel } from "../../actions/channel_actions";
-import ChannelIndex from "./channels_index_form";
+import { requestChannels } from "../../actions/channel_actions";
+import ChannelIndex from "./channels_index";
 
-const mapStateToProps = (state) => {
-    const session = state.session;
-    const users = state.entities.users
-    return ({
-        channels: Object.values(state.entities.channels)
-    })
-
-}
+const mapStateToProps = (state) => ({
+    channels: Object.values(state.entities.channels)
+})
 
 const mapDispatchToProps = (dispatch) => ({
-    requestChannels: () => dispatch(requestChannels()),
+    requestChannels: (serverId) => dispatch(requestChannels(serverId)),
 
 })
 

@@ -8,7 +8,7 @@ class Api::ChannelsController < ApplicationController
     end
     
     def show
-        @channel = Channel.find_by(id: params[:id])
+        @channel = Channel.find_by(id: params[:server_id])
         if @channel
             render "api/channels/show"
         else
@@ -32,7 +32,7 @@ class Api::ChannelsController < ApplicationController
 
     private
     def channel_params
-        params.require(:channel).permit(:channel_name)
+        params.require(:channel).permit(:channel_name, :server_id)
     end
     def current_server
         server = Server.find_by(id: params[:server_id])
