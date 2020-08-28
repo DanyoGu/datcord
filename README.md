@@ -18,11 +18,13 @@ Features
 ---
 ### User Authentication
 Datcord utlizes BCrypt to ensure user data protection so that users can securely create profiles and keep their information safe. Additionally, a demo user account is also pre-created for anyone who wants to quickly preview the site without having to create their own account.
+
 ![alt text](https://i.imgur.com/mP1Jc6e.png)
 
 
 ### Server/Channel Creation
 Users can create custom servers/channels for other users to join via invite code. Only users with the invite code can join a specific server.
+
 ![alt text](https://im2.ezgif.com/tmp/ezgif-2-9c9161d0b3a1.gif)
 
 
