@@ -39,7 +39,8 @@ class SessionForm extends React.Component {
     return (
       <div className="login-header">
         <h2>Welcome Back!</h2>
-        We're so excited to see you again!
+        <h3>We're so excited to see you again!</h3>
+
       </div>
     );
   }
@@ -52,18 +53,23 @@ class SessionForm extends React.Component {
   }
   signup_link() {
       return(
-          <div>
+          <div className="login-registration-prompt">
+              <span>
+
               Need an Account?
-              <Link to="/signup"> Register</Link>
+              </span>
+              <Link to="/signup" className="signup-link"> Register</Link>
           </div>
       )
   } 
   login_link() {
-      return(
-          <div>
-              <Link to="/login">Already have an account?</Link>
-          </div>
-      )
+      return (
+        <div className="login-registration-prompt">
+          <Link to="/login" className="login-link">
+            Already have an account?
+          </Link>
+        </div>
+      );
   } 
   demo(e) {
     e.preventDefault();
@@ -73,45 +79,60 @@ class SessionForm extends React.Component {
   render() {
       const { formType } = this.props
     return (
-        <div className="login-form-container">
-          <header>
-            <h1 className="logo">Datcord</h1>
-          </header>
+      <div className="login-form-container">
+        <header>
+          <img src="/Discord-Logo-White.png" className="login-logo" alt=""/ >
 
-            <div className="login-box">
+            <img
+              src="https://fontmeme.com/permalink/201002/4f619e04f5e14ccb788aff40850b9b48.png"
+              alt="discord-logo-font"
+              border="0"
+              className="login-logo-text"
+            ></img>
 
-                <form onSubmit={this.handleSubmit} className="session-form">
-                    {formType === "login" ? this.login_header() : this.signup_header()}
-                    <br />
-                    <label className = "username-field">
-                        Username
-                        <br />
-                        <input
-                        type="text"
-                        value={this.state.username}
-                        onChange={this.update("username")}
-                        className = "username-box"
-                        />
-                    </label>
-                    <label>
-                        <br />
-                        Password
-                        <br />
-                        <input
-                        type="password"
-                        value={this.state.password}
-                        onChange={this.update("password")}
-                        className = "password-box"
-                        />
-                    </label>
-                    <br />
-                    <input type="submit" value={this.props.formType} className = "submit-button" />
-                    {formType == "login" ? <button onClick={this.demo} className="demo-button">Demo</button> : null}
-                    <br />
-                    {formType === "login" ? this.signup_link() : this.login_link()}
-                    {this.renderErrors()}
-                </form>
-            </div>
+        </header>
+
+        <div className="login-box">
+          <form onSubmit={this.handleSubmit} className="session-form">
+            {formType === "Login" ? this.login_header() : this.signup_header()}
+            <br />
+            <label className="username-field">
+              <span className="username-label">USERNAME</span>
+              <br />
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update("username")}
+                className="username-box"
+              />
+            </label>
+            <label className="password-field">
+              <br />
+              <span className="password-label">PASSWORD</span>
+              <br />
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                className="password-box"
+              />
+            </label>
+            <br />
+            <input
+              type="submit"
+              value={this.props.formType}
+              className="submit-button"
+            />
+            {formType == "Login" ? (
+              <button onClick={this.demo} className="demo-button">
+                Demo
+              </button>
+            ) : null}
+            <br />
+            {formType === "Login" ? this.signup_link() : this.login_link()}
+            {this.renderErrors()}
+          </form>
+        </div>
       </div>
     );
   }
