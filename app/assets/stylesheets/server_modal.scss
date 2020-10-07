@@ -4,7 +4,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 50px;
     border: none;
     border-radius: 5px;
 }
@@ -26,13 +25,43 @@
     font-size: 20px;
     
 }
+
 .join-header{
     display: flex;
     justify-content: center;
     color: #43B581;
     font-weight: 900;
     font-size: 20px;
+}
+.create-server-submit-bar{
+    background-color: rgb(197, 197, 197);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.server-submit-button{
+    background-color:#7289DA;
+    color: white;
+    width: 143px;
+    font-size: 15px;
+    height: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+}
+.server-submit-button:focus{
+    outline: none;
+}
+.server-submit-button:hover{
+    background-color: #637cd4;
+    cursor: pointer;
+}
+.back-button{
+    margin-top: 10px;
     
+    font-weight: 700;
+    cursor: pointer;
 }
 .join-message{
     text-align: center;
@@ -55,4 +84,7 @@
     border: 1.5px solid #7289DA;
     border-radius: 5px;
     margin-top: 5px;
+}
+.create-server-header{
+    padding: 30px;
 }

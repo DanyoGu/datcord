@@ -29,6 +29,7 @@
 .wrapper .sidebar::-webkit-scrollbar {
   //display: none;
 }
+
 .wrapper .sidebar ul li{
     padding: 15px;
     margin-left: 10px;
@@ -36,8 +37,6 @@
     border-bottom: 1px solid rgba(0,0,0,0.05);
     border-top: 1px solid rgba(225,225,225,0.05);
     background-color: #36393F;
-//     height: 25px;
-//     width: 25px;
      border-radius: 50%;
     position: relative;
     text-align: center;
@@ -46,17 +45,14 @@
     font-weight: bold;
     font-size: 20px;
     width: 55px;
+    cursor: pointer;
  }
 
 .wrapper .sidebar ul li:hover {
     background-color: #7289DA;
     border-radius: 35%;
 }
-// .channel-bar {
-//     height: 100%;
-//     width: 100%;
-//     margin-left: 100px;
-// }
+
 
 .tooltip {
   position: relative;
@@ -69,14 +65,16 @@
   top: 13px;
   left: 105%;
   visibility: hidden;
-  width: 70px;
+  width: 150px;
   background-color: black;
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
   margin-left: 5px;
- 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;

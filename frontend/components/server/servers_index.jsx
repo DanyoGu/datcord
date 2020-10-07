@@ -74,14 +74,10 @@ class ServerIndex extends React.Component {
                 <span className="tooltiptext">Home</span>
               </a>
               {serversList}
-              <div className="server-create-box">
-                <li>
-                  <div
-                    className="create-server-button"
-                    onClick={this.toggleCreateModal}
-                  >
-                    +
-                  </div>
+              <div>
+                <li onClick={this.toggleCreateModal} className="tooltip">
+                  <i class="fas fa-plus"></i>
+                  <span className="tooltiptext">Create a Server</span>
                 </li>
 
                 <Modal
@@ -97,8 +93,10 @@ class ServerIndex extends React.Component {
                       bottom: "0",
                       overflow: "hidden",
                       width: "490px",
-                      height: "350px",
+                      height: "298px",
                       background: "rgb(255, 255, 255)",
+                      padding: "0px",
+                      border: "none",
                     },
                     overlay: {
                       position: "fixed",
@@ -108,17 +106,12 @@ class ServerIndex extends React.Component {
                   }}
                 >
                   <ServerFormContainer closeModal={this.toggleCreateModal} />
-                  <label
-                    className="new-server-close"
-                    onClick={this.toggleCreateModal}
-                  >
-                    BACK
-                  </label>
                 </Modal>
               </div>
-              <div className="server-join-box">
-                <li onClick={this.toggleJoinModal}>
-                  <div className="add-server-button">+++</div>
+              <div>
+                <li onClick={this.toggleJoinModal} className="tooltip">
+                  <i class="fas fa-arrow-up"></i>
+                  <span className="tooltiptext">Join a Server</span>
                 </li>
 
                 <Modal
