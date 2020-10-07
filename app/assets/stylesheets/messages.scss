@@ -2,9 +2,9 @@
 .wrapper .messages-bar {
     position: absolute;
     top: 0;
-    width: 1300px;
+    width: 1575px;
     height: 100%;
-    margin-left: 175px;
+    margin-left: 250px;
     text-align: left;
     color: white;
     background-color:#36393F;
@@ -72,7 +72,10 @@
       &:focus{
         outline: none;
       }
+      color: white;
       border-bottom: 0px;
+      border: none;
+      font-weight: 500;
     }
     
   }

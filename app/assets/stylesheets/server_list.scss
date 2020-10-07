@@ -21,7 +21,7 @@
     width: 75px;
     height: 100vh;
     // background: ;
-    padding: 30px 0;
+    padding: 10px 0;
     background-color: #202225;
     color: white;
     //overflow-y: scroll;
@@ -29,7 +29,7 @@
 .wrapper .sidebar::-webkit-scrollbar {
   //display: none;
 }
-.wrapper .sidebar ul li {
+.wrapper .sidebar ul li{
     padding: 15px;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -47,8 +47,10 @@
     font-size: 20px;
     width: 55px;
  }
+
 .wrapper .sidebar ul li:hover {
     background-color: #7289DA;
+    border-radius: 35%;
 }
 // .channel-bar {
 //     height: 100%;
@@ -148,4 +150,14 @@ html {
 .server-name-box:focus{
   outline: none;
 
+}
+.homelink{
+  width: 55px;
+  height: 55px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 55px;
+}
+.homelink:hover {
+  border-radius: 35%;
 }

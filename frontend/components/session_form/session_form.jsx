@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="login-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -81,15 +81,14 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <header>
-          <img src="/Discord-Logo-White.png" className="login-logo" alt=""/ >
+          <img src="/Discord-Logo-White.png" className="login-logo" alt="" />
 
-            <img
-              src="https://fontmeme.com/permalink/201002/4f619e04f5e14ccb788aff40850b9b48.png"
-              alt="discord-logo-font"
-              border="0"
-              className="login-logo-text"
-            ></img>
-
+          <img
+            src="https://fontmeme.com/permalink/201002/4f619e04f5e14ccb788aff40850b9b48.png"
+            alt="discord-logo-font"
+            border="0"
+            className="login-logo-text"
+          ></img>
         </header>
 
         <div className="login-box">
@@ -133,6 +132,21 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
           </form>
         </div>
+        <footer>
+          <div class="personal-div">
+            <a href="https://www.linkedin.com/in/danielxgu/">
+              <img src="./linkedin.png"></img>
+            </a>
+
+            <a href="http://www.estherbaek.com/">
+              <img src="./personalsite.png"></img>
+            </a>
+
+            <a href="https://github.com/DanyoGu/datcord">
+              <img src="./github.svg"></img>
+            </a>
+          </div>
+        </footer>
       </div>
     );
   }

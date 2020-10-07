@@ -20,8 +20,10 @@ class CreateServerForm extends React.Component{
     handleSubmit(e) {
         e.preventDefault();
         const server = Object.assign({}, this.state);
+        let channel = { channel_name: "general", server_id: server.id }
         this.props.processForm(server)
         .then(() => (
+            this.props.createChannel(server.id, channel),
             this.props.closeModal()
         ))
         
