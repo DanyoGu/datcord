@@ -57,6 +57,24 @@
     background-color: #637cd4;
     cursor: pointer;
 }
+.server-join-button{
+    background-color:#43B581;
+    color: white;
+    width: 143px;
+    font-size: 15px;
+    height: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+}
+.server-join-button:focus{
+    outline: none;
+}
+.server-join-button:hover{
+    background-color: #43b582b4;
+    cursor: pointer;
+}
 .back-button{
     margin-top: 10px;
     
@@ -80,11 +98,31 @@
 .server-name-box{
     font-size: 1.5em;
     height: 50px;
+    width: 100%;
     padding: 15px;
     border: 1.5px solid #7289DA;
     border-radius: 5px;
     margin-top: 5px;
 }
+.server-join-box{
+    font-size: 1.5em;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    border: 1.5px solid #43B581;
+    border-radius: 5px;
+    margin-top: 8px;
+}
 .create-server-header{
     padding: 30px;
+}
+.server-form-filler{
+    font-size: 15px;
+    color: gray;
+}
+.join-code-prompt{
+    font-size: 15px;
+    color: gray;
+    display: flex;
+    justify-content: center;
 }

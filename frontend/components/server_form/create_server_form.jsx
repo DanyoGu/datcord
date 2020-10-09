@@ -32,9 +32,9 @@ class CreateServerForm extends React.Component{
         return (
           <div className="whole-server-form">
             <div className="create-server-header">
-              <h1 className="create-header">CREATE YOUR DATCORD SERVER</h1>
+              <h1 className="create-header">Create Your Datcord Server</h1>
               <br />
-              <span className="create-message">
+              <span className="join-code-prompt">
                 Make a place for you to hang out with your communities and
                 friends.
               </span>

@@ -23,25 +23,52 @@ class JoinServerForm extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1 className="join-header">JOIN SERVER</h1>
-        <span className="join-message">Enter an invite below to join an existing server. The invite will look something like these:</span>
-        <br />
-
-        <form onSubmit={this.handleSubmit} className="server-join-form">
-          <label className="server-name-field">
-            SERVER JOIN CODE
-            <br />
-            <input
-              type="text"
-              value={this.state.invite_code}
-              onChange={this.update("invite_code")}
-              className="server-code-box"
-            />
-          </label>
+      <div className="whole-server-form">
+        <div className="create-server-header">
+          <h1 className="join-header">Join a Server</h1>
           <br />
-          <input type="submit" value="Join" className="join-button"></input>
-        </form>
+          <span className="join-code-prompt">
+            Enter an invite below to join an existing server.
+          </span>
+
+          <br />
+          <br />
+
+          <span className="join-message"></span>
+          <form onSubmit={this.handleSubmit} className="server-form">
+            <label className="server-name">
+              INVITE LINK
+              <br />
+              <input
+                type="text"
+                value={this.state.invite_code}
+                onChange={this.update("invite_code")}
+                className="server-join-box"
+              />
+            </label>
+            <br />
+            <br />
+
+            <span className="server-name">INVITES SHOULD LOOK LIKE:</span>
+            <br />
+            <br />
+            <span className="server-form-filler">
+              eDLvrrEQBMvmAA
+              <br />
+              datcord-eDLvrrEQBMvmAA
+            </span>
+          </form>
+        </div>
+        <div className="create-server-submit-bar">
+          <span className="back-button" onClick={this.props.closeModal}>
+            Back
+          </span>
+          <input
+            type="submit"
+            value="Join"
+            className="server-join-button"
+          ></input>
+        </div>
       </div>
     );
   }

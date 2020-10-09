@@ -127,8 +127,11 @@ class ServerIndex extends React.Component {
                       bottom: "0",
                       overflow: "hidden",
                       width: "490px",
-                      height: "350px",
+                      height: "365px",
                       background: "rgb(255, 255, 255)",
+                      padding: "0px",
+                      border: "none",
+                      
                     },
                     overlay: {
                       position: "fixed",
@@ -138,12 +141,6 @@ class ServerIndex extends React.Component {
                   }}
                 >
                   <JoinServerFormContainer closeModal={this.toggleJoinModal} />
-                  <label
-                    className="new-server-join-close"
-                    onClick={this.toggleJoinModal}
-                  >
-                    BACK
-                  </label>
                 </Modal>
               </div>
 
