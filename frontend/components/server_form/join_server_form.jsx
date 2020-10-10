@@ -67,6 +67,7 @@ class JoinServerForm extends React.Component {
             type="submit"
             value="Join"
             className="server-join-button"
+            onClick={this.handleSubmit}
           ></input>
         </div>
       </div>

@@ -24,4 +24,3 @@ server2 = Server.create(server_name: "Warriors", owner_id: user2.id, invite_code
 membership1 = Membership.create(user_id: user1.id, server_id: server2.id);
 membership2 = Membership.create(user_id: user2.id, server_id: server1.id);
 
-channel1 = Channel.create(channel_id)

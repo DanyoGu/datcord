@@ -20,13 +20,14 @@ class CreateServerForm extends React.Component{
     handleSubmit(e) {
         e.preventDefault();
         const server = Object.assign({}, this.state);
-        let channel = { channel_name: "general", server_id: server.id }
         this.props.processForm(server)
-        .then(() => (
-            this.props.createChannel(server.id, channel),
-            this.props.closeModal()
-        ))
-        
+          .then((payload) => {
+              let channel = {
+                channel_name: "general"
+              };
+              this.props.createChannel(payload.server.id, channel)
+              this.props.closeModal()
+          })
     }
     render () {
         return (
@@ -64,6 +65,7 @@ class CreateServerForm extends React.Component{
                     type="submit"
                     value="Create"
                     className="server-submit-button"
+                    onClick={this.handleSubmit}
                   ></input>
               </div>
           </div>

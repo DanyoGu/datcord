@@ -15,8 +15,9 @@
     border-bottom: 2px solid rgb(39, 39, 39);
 }
 .channel-links-lis{
-
+    color: #72767D;
     padding: 10px;
+    cursor: pointer;
 }
 .channel-links{
     color: #72767D;
@@ -33,7 +34,7 @@
     color: white;
 }
 .channel-create-li{
-
+    cursor: pointer;
     padding: 10px;
 }
 .channel-create-li:hover{

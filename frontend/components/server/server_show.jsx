@@ -36,29 +36,32 @@ class ServerShow extends React.Component {
     if (!this.props.server) return null;
     const server = this.props.server;
     const channels = this.props.channels;
+    const username = this.props.currentUser.username;
 
     return (
       <div className="channel-bar">
         <h1 className="server-title">{server.server_name}</h1>
         <ul className="channel-links-container">
           {channels.map((channel) => (
-            <li key={channel.id} className="channel-links-lis">
-              <Link
+            <li
+              key={channel.id}
+              className="channel-links-lis"
+              onClick={() =>
+                this.props.history.push(`/servers/${server.id}/${channel.id}`)
+              }
+            >
+              # {channel.channel_name}
+              {/* <Link
                 className="channel-links"
                 to={`/servers/${server.id}/${channel.id}`}
               >
                 # {channel.channel_name}
-              </Link>
+              </Link> */}
             </li>
           ))}
           <div className="channel-create-box">
-            <li className="channel-create-li">
-              <span
-                className="create-channel-button"
-                onClick={this.toggleCreateModal}
-              >
-                + channel
-              </span>
+            <li className="channel-create-li" onClick={this.toggleCreateModal}>
+              <span className="create-channel-button">+ channel</span>
             </li>
 
             <Modal
@@ -110,6 +113,14 @@ class ServerShow extends React.Component {
           className="invite-code"
         >
           ✉ Invite Code
+        </div>
+        <div className="user-toolbar">
+          <img src="discord-logo-online.jpg" alt="" />
+          <span>
+            <span>{username}</span>
+            <br />
+            #1118
+          </span>
         </div>
       </div>
     );

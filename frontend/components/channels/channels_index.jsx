@@ -13,6 +13,7 @@ class ChannelsIndex extends React.Component {
     }
     render () {
         const { channels } = this.props
+        
         return (
             <div className="channel-wrapper">
                 <div className="">

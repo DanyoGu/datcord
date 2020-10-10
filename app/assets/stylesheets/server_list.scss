@@ -163,3 +163,19 @@ html {
 .homelink:hover {
   border-radius: 35%;
 }
+.user-toolbar{
+  display: flex;
+  background-color: #292B2F;
+  margin-top: 195%;
+  padding: 10px;
+  img{
+    width: 40px;
+    height: 40px;
+  }
+  :nth-child(2){
+    margin-top: 4px;
+    :first-child{
+      font-weight: 900;
+    }
+  }
+}

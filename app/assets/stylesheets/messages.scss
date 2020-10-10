@@ -96,3 +96,24 @@
   outline: 1px solid #202225;
   border-radius: 10px;
 }
+.channel-welcome{
+  font-weight: 900;
+  font-size: 30px;
+  margin-left: 15px;
+}
+.channel-start{
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.message-list-header{
+
+  padding-bottom: 10px;
+}
+.message-list-header:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 99%;
+  padding-top: 20px;
+  border-bottom: 1px solid gray;
+}
