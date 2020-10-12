@@ -1,5 +1,5 @@
 .wrapper .channel-bar{
-    position: absolute;
+    position: fixed;
     height: 98vh;
     width: 35%;
     margin-left: 75px;
@@ -67,16 +67,17 @@
 }
 .channel-header{
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     border-bottom: 2px solid rgb(39, 39, 39);
 }
 .user-toolbar-buttons{
-    margin-left: 77px;
+    margin-left: 72px;
     margin-top: 0px;
 }
 .logout-button-container{
     height: 35px;
     width: 37px;
+    margin-right: 10px;
     i{
         position: relative;
         top: 15%;
@@ -88,10 +89,10 @@
 
 .logout-button-container:hover{
     cursor: pointer;
-    background-color: rgb(119, 119, 119);
+    background-color: rgba(119, 119, 119, 0.356);
     border-radius: 3px;
     i{
-       color: red; 
+       color: white; 
     }  
 }
 
@@ -101,7 +102,7 @@
   visibility: hidden;
   width: 90px;
   bottom: 90%;
-  left: 70%;
+  left: 38%;
   background-color: black;
   color: #fff;
   text-align: center;

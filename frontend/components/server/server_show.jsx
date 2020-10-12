@@ -43,97 +43,100 @@ class ServerShow extends React.Component {
     const id = this.props.currentUser.id;
 
     return (
-      <div className="channel-bar">
-        <h1 className="server-title">{server.server_name}</h1>
-        <ul className="channel-links-container">
-          {channels.map((channel) => (
-            <li
-              key={channel.id}
-              className="channel-links-lis"
-              onClick={() =>
-                this.props.history.push(`/servers/${server.id}/${channel.id}`)
-              }
-            >
-              # {channel.channel_name}
-              {/* <Link
-                className="channel-links"
-                to={`/servers/${server.id}/${channel.id}`}
+        <div className="channel-bar">
+          <h1 className="server-title">{server.server_name}</h1>
+          <ul className="channel-links-container">
+            {channels.map((channel) => (
+              <li
+                key={channel.id}
+                className="channel-links-lis"
+                onClick={() =>
+                  this.props.history.push(`/servers/${server.id}/${channel.id}`)
+                }
               >
                 # {channel.channel_name}
-              </Link> */}
-            </li>
-          ))}
-          <div className="channel-create-box">
-            <li className="channel-create-li" onClick={this.toggleCreateModal}>
-              <span className="create-channel-button">+ channel</span>
-            </li>
-
-            <Modal
-              className="create-channel-modal"
-              isOpen={this.state.showCreateModal}
-              onRequestClose={this.toggleCreateModal}
-              ariaHideApp={false}
-              style={{
-                content: {
-                  top: "50%",
-                  left: "50%",
-                  right: "0",
-                  bottom: "0",
-                  overflow: "hidden",
-                  width: "490px",
-                  height: "350px",
-                  background: "rgb(255, 255, 255)",
-                },
-                overlay: {
-                  position: "fixed",
-                  backgroundColor: "rgba(0,0,0,0.7)",
-                  zIndex: "50",
-                },
-              }}
-            >
-              <ChannelFormContainer
-                closeModal={this.toggleCreateModal}
-                server={server}
-              />
-              <label
-                className="new-channel-close"
+                {/* <Link
+                  className="channel-links"
+                  to={`/servers/${server.id}/${channel.id}`}
+                >
+                  # {channel.channel_name}
+                </Link> */}
+              </li>
+            ))}
+            <div className="channel-create-box">
+              <li
+                className="channel-create-li"
                 onClick={this.toggleCreateModal}
               >
-                BACK
-              </label>
-            </Modal>
-          </div>
-        </ul>
-        <div className="">
-          <ProtectedRoute
-            path="/servers/:serverId/:channelId"
-            component={ChannelShowContainer}
-          />
-        </div>
-        <div
-          onClick={() => {
-            navigator.clipboard.writeText(server.invite_code);
-          }}
-          className="invite-code"
-        >
-          ✉ Invite Code
-        </div>
-        <footer className="user-toolbar">
-          <img src="discord-logo-online.jpg" alt="" />
-          <span>
-            <span>{username}</span>
-            <br />#{id}
-          </span>
-          <div className="user-toolbar-buttons">
-            <div
-              className="logout-button-container"
-              onClick={this.logoutCurrentUser}
-            >
-              <i class="fas fa-sign-out-alt"></i>
-              <span className="toolbar-text">Logout</span>
+                <span className="create-channel-button">+ channel</span>
+              </li>
+
+              <Modal
+                className="create-channel-modal"
+                isOpen={this.state.showCreateModal}
+                onRequestClose={this.toggleCreateModal}
+                ariaHideApp={false}
+                style={{
+                  content: {
+                    top: "50%",
+                    left: "50%",
+                    right: "0",
+                    bottom: "0",
+                    overflow: "hidden",
+                    width: "490px",
+                    height: "350px",
+                    background: "rgb(255, 255, 255)",
+                  },
+                  overlay: {
+                    position: "fixed",
+                    backgroundColor: "rgba(0,0,0,0.7)",
+                    zIndex: "50",
+                  },
+                }}
+              >
+                <ChannelFormContainer
+                  closeModal={this.toggleCreateModal}
+                  server={server}
+                />
+                <label
+                  className="new-channel-close"
+                  onClick={this.toggleCreateModal}
+                >
+                  BACK
+                </label>
+              </Modal>
             </div>
+          </ul>
+          <div className="">
+            <ProtectedRoute
+              path="/servers/:serverId/:channelId"
+              component={ChannelShowContainer}
+            />
           </div>
-        </footer>
+          <div
+            onClick={() => {
+              navigator.clipboard.writeText(server.invite_code);
+            }}
+            className="invite-code"
+          >
+            ✉ Invite Code
+          </div>
+          <footer className="user-toolbar">
+            <img src="discord-logo-online.jpg" alt="" />
+            <span>
+              <span>{username}</span>
+              <br />#{id}
+            </span>
+            <div className="user-toolbar-buttons">
+              <div
+                className="logout-button-container"
+                onClick={this.logoutCurrentUser}
+              >
+                <i class="fas fa-sign-out-alt"></i>
+                <span className="toolbar-text">Logout</span>
+              </div>
+            </div>
+          </footer>
       </div>
     );
   }

@@ -1,18 +1,25 @@
 
-.wrapper .messages-bar {
-    position: absolute;
+.wrapper .messages-bar-container {
+    position: fixed;
     top: 0;
-    width: 1575px;
+    width: 85%;
     height: 100%;
+    margin-top: 23px;
     margin-left: 250px;
     text-align: left;
     color: white;
     background-color:#36393F;
     padding: 0px 0;
+    display: flex;
+    overflow: none;
+    z-index: 1;
+}
+.messages-bar{
+  width: 100%;
 }
 .message-list {
   overflow-y: scroll;
-  height: 80%;
+  height: 83%;
   width: 100%;
   outline: none;
 }
@@ -58,15 +65,17 @@
   padding-top: 0px;
   .message-form-2{
     display: flex;
-    height: 40px;
+    height: 50px;
     background-color: #40444B;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-left: 12px;
     border-radius: 5px;
+    margin-top: 25px;
     input{
       width: 95%;
       margin: 0 auto;
+      font-size: 1.2em;
       padding: 10px;
       background-color: #40444B;
       &:focus{
@@ -116,4 +125,41 @@
   width: 99%;
   padding-top: 20px;
   border-bottom: 1px solid gray;
+}
+.members-bar{
+  width: 25%;
+  // border-left: 2px solid rgb(39, 39, 39);
+}
+.members-bar-header{
+  font-size: 18px;
+  padding: 10px 15px 10px 10px;
+  border-bottom: 2px solid rgb(39, 39, 39);
+}
+.member-bar-li{
+  display: flex;
+  padding: 10px 10px;
+  line-height: 20px;
+  cursor: pointer;
+  img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 14px;
+  }
+  .member-bar-content{
+    p{
+      color: gray;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  h3{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+}
+.member-bar-li:hover{
+  background-color: #4d5058;
+  border-radius: 5px;
 }

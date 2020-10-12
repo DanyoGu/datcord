@@ -11,6 +11,8 @@ class ChannelShow extends React.Component {
             messages: this.props.messages
         }
         this.bottom = React.createRef();
+        this.randomMessage = this.randomMessage.bind(this);
+        this.formatDate = this.formatDate.bind(this);
     }
 
     componentDidMount() {
@@ -38,45 +40,112 @@ class ChannelShow extends React.Component {
         // $('.messages-bar').scrollTop($('.messages-bar')[0].scrollHeight);
         // this.bottom.current.scrollIntoView();
     }
+    randomMessage(num) {
+        switch (num) {
+            case 1:    
+                return "Shooting Free Throws";
+            case 2:    
+                return "Shooting Three Pointers";
+            case 3:    
+                return "Getting Rebounds";
+            case 4:    
+                return "Swatting Shots";
+            case 5:    
+                return "Dishing Dimes";
+            case 6:    
+                return "Working Out";
+            case 7:    
+                return "Requesting a Trade";
+            case 8:    
+                return "Practicing Ball Handling";
+            case 9:    
+                return "Getting Ready for Playoffs";
+            case 10:
+                return "Playing VALORANT"
+            default:
+                return "Transferring to the NFL";
+        }
+    }
+    formatDate(date) {
+        const arr = date.split("-");
 
+        return `${arr[1]}/${arr[2]}/${arr[0]}`
+    }
     render() {
         if (!this.props.channel) return null;
         const channel = this.props.channel;
+        const numMembers = this.props.currentServer.members.length + 1;
+        const serverOwner = this.props.currentServer.owner;
+        const members = this.props.currentServer.members.map(member => {
+            return (
+              <ul>
+
+                <li className="member-bar-li">
+                  <img src="discord-logo.png" alt="justin goes here" />
+                  <div className="member-bar-content">
+                    <h3 className="memmber-username">{member.username}</h3>
+                    <p>
+                      {this.randomMessage(Math.floor(Math.random() * 10) + 1)}
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            );
+        })
 
         const messages = this.props.messages.map(message => {
             return (
-                <li className="message" key={message.id}>
-                    <img src="discord-logo.png" alt="justin goes here"/>
-                    <div className="whole-message">
-                        <div className="message-author-date">
-                            <h3>{message.author}</h3>
-                            <p>11/18/1997</p>
-                        </div>
-                        <div className="message-body">
-                            {message.body}
-                        </div>
-                         
-                    </div>
-                </li>
-            )
+              <li className="message" key={message.id}>
+                <img src="discord-logo.png" alt="justin goes here" />
+                <div className="whole-message">
+                  <div className="message-author-date">
+                    <h3>{message.author}</h3>
+                    <p>{this.formatDate(message.created_at.slice(0,10))}</p>
+                  </div>
+                  <div className="message-body">{message.body}</div>
+                </div>
+              </li>
+            );
         })
 
         return (
-          <div className="messages-bar">
-            <h1 className="channel-header"># {channel.channel_name}</h1>
-            <div className="message-list">
-              <div className="message-list-header">
-                <img src="channel-header.jpg" alt="" />
-                <br />
-                <span className="channel-welcome">Welcome to #{channel.channel_name}</span>
-                <br />
-                <br />
-                <span className="channel-start">This is the start of the #{channel.channel_name} channel</span>
-              </div>
+          <div className="messages-bar-container">
+            <div className="messages-bar">
+              <h1 className="channel-header"># {channel.channel_name}</h1>
+              <div className="message-list">
+                <div className="message-list-header">
+                  <img src="channel-header.jpg" alt="" />
+                  <br />
+                  <span className="channel-welcome">
+                    Welcome to #{channel.channel_name}
+                  </span>
+                  <br />
+                  <br />
+                  <span className="channel-start">
+                    This is the start of the #{channel.channel_name} channel
+                  </span>
+                </div>
 
-              {messages}
+                {messages}
+              </div>
+              <MessageFormContainer
+                className="message-form-container"
+                channel={channel}
+              />
             </div>
-            <MessageFormContainer channel={channel} />
+            <div className="members-bar">
+              <h1 className="members-bar-header">{`Members - ${numMembers}`}</h1>
+              <li className="member-bar-li">
+                <img src="discord-logo.png" alt="justin goes here" />
+                <div className="member-bar-content">
+                  <h3 className="memmber-username">{serverOwner.username}</h3>
+                  <p>
+                    {this.randomMessage(Math.floor(Math.random() * 10) + 1)}
+                  </p>
+                </div>
+              </li>
+              {members}
+            </div>
           </div>
         );
     }
