@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { requestServer } from "../../actions/server_actions";
 import { requestChannels } from "../../actions/channel_actions";
+import { logout } from "../../actions/session_actions";
 import ServerShow from "./server_show";
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,8 +14,9 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    requestServer: () => dispatch(requestServer(ownProps.match.params.serverId)),
-    requestChannels: () => dispatch(requestChannels(ownProps.match.params.serverId))
-})
+  requestServer: () => dispatch(requestServer(ownProps.match.params.serverId)),
+  requestChannels: () => dispatch(requestChannels(ownProps.match.params.serverId)),
+  logoutUser: () => dispatch(logout()),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ServerShow)

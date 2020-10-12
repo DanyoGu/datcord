@@ -13,6 +13,7 @@ class ServerShow extends React.Component {
       showCreateModal: false,
     };
     this.toggleCreateModal = this.toggleCreateModal.bind(this);
+    this.logoutCurrentUser = this.logoutCurrentUser.bind(this);
   }
 
   componentDidMount() {
@@ -30,13 +31,16 @@ class ServerShow extends React.Component {
       showCreateModal: !this.state.showCreateModal,
     });
   }
-
+  logoutCurrentUser() {
+    this.props.logoutUser().then(() => this.props.history.push("/login"));
+  }
 
   render() {
     if (!this.props.server) return null;
     const server = this.props.server;
     const channels = this.props.channels;
     const username = this.props.currentUser.username;
+    const id = this.props.currentUser.id;
 
     return (
       <div className="channel-bar">
@@ -114,14 +118,22 @@ class ServerShow extends React.Component {
         >
           ✉ Invite Code
         </div>
-        <div className="user-toolbar">
+        <footer className="user-toolbar">
           <img src="discord-logo-online.jpg" alt="" />
           <span>
             <span>{username}</span>
-            <br />
-            #1118
+            <br />#{id}
           </span>
-        </div>
+          <div className="user-toolbar-buttons">
+            <div
+              className="logout-button-container"
+              onClick={this.logoutCurrentUser}
+            >
+              <i class="fas fa-sign-out-alt"></i>
+              <span className="toolbar-text">Logout</span>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

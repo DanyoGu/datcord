@@ -144,9 +144,6 @@ class ServerIndex extends React.Component {
                 </Modal>
               </div>
 
-              <li onClick={this.logoutCurrentUser}>
-                <span>LL</span>
-              </li>
             </ul>
           </div>
           <div>

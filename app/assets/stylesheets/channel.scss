@@ -1,11 +1,11 @@
 .wrapper .channel-bar{
     position: absolute;
-    height: 100vh;
+    height: 98vh;
     width: 35%;
     margin-left: 75px;
     color: white;
     background-color:#2E3136;
-    border-radius: 15px 0px 0px 0px;
+    border-radius: 5px 0px 0px 0px;
 
 }
 .server-title{
@@ -69,4 +69,51 @@
     font-size: 18px;
     padding: 10px;
     border-bottom: 2px solid rgb(39, 39, 39);
+}
+.user-toolbar-buttons{
+    margin-left: 77px;
+    margin-top: 0px;
+}
+.logout-button-container{
+    height: 35px;
+    width: 37px;
+    i{
+        position: relative;
+        top: 15%;
+        left: 20%;
+        color: gray;
+        font-size: 25px;
+    }
+}
+
+.logout-button-container:hover{
+    cursor: pointer;
+    background-color: rgb(119, 119, 119);
+    border-radius: 3px;
+    i{
+       color: red; 
+    }  
+}
+
+
+/* logo.logout-button-container text */
+.logout-button-container .toolbar-text {
+  visibility: hidden;
+  width: 90px;
+  bottom: 90%;
+  left: 70%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+font-weight: 900;
+  /* Position the logo.logout-button-container text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the logo.logout-button-container text when you mouse over the logo.logout-button-container container */
+.logout-button-container:hover .toolbar-text {
+  visibility: visible;
 }

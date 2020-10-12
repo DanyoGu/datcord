@@ -19,7 +19,7 @@
 .wrapper .sidebar {
     position: absolute;
     width: 75px;
-    height: 100vh;
+    height: 100%;
     // background: ;
     padding: 10px 0;
     background-color: #202225;
@@ -166,6 +166,7 @@ html {
 .user-toolbar{
   display: flex;
   background-color: #292B2F;
+  position: absolute;
   margin-top: 195%;
   padding: 10px;
   img{
@@ -177,5 +178,11 @@ html {
     :first-child{
       font-weight: 900;
     }
+  }
+}
+.channel-bar{
+  footer{
+    bottom: 0%;
+    width: 71%;
   }
 }
