@@ -47,7 +47,7 @@ class ChannelShow extends React.Component {
             case 2:    
                 return "Shooting Three Pointers";
             case 3:    
-                return "Getting Rebounds";
+                return "Grabbing Rebounds";
             case 4:    
                 return "Swatting Shots";
             case 5:    
@@ -67,8 +67,8 @@ class ChannelShow extends React.Component {
         }
     }
     formatDate(date) {
-        const arr = date.split("-");
-
+        if(!date) return null;
+        const arr = date.slice(0,10).split("-");
         return `${arr[1]}/${arr[2]}/${arr[0]}`
     }
     render() {
@@ -79,7 +79,6 @@ class ChannelShow extends React.Component {
         const members = this.props.currentServer.members.map(member => {
             return (
               <ul>
-
                 <li className="member-bar-li">
                   <img src="discord-logo.png" alt="justin goes here" />
                   <div className="member-bar-content">
@@ -100,7 +99,7 @@ class ChannelShow extends React.Component {
                 <div className="whole-message">
                   <div className="message-author-date">
                     <h3>{message.author}</h3>
-                    <p>{this.formatDate(message.created_at.slice(0,10))}</p>
+                    <p>{this.formatDate(message.created_at)}</p>
                   </div>
                   <div className="message-body">{message.body}</div>
                 </div>

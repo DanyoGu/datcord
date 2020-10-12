@@ -27,31 +27,43 @@ class CreateChannelForm extends React.Component {
     }
     render() {
         return (
-            <div className="whole-channel-form">
-                <h1 className="create-channel-header">CREATE TEXT CHANNEL</h1>
-                <br />
+          <div className="whole-server-form">
+            <div className="create-server-header">
+              <h1 className="create-header">Create Your Text Channel</h1>
+              <br />
+              <span className="join-code-prompt">
+                Create a Text Channel to talk about anything and everything.
+              </span>
 
-                <br />
-                <form onSubmit={this.handleSubmit} className="channel-form">
-                    <label className="channel-name-field">
-                        <span className="channel-name">CHANNEL NAME </span>
+              <br />
+              <br />
+              <br />
+              <form onSubmit={this.handleSubmit} className="server-form">
+                <label className="server-name-field">
+                  <span className="server-name">CHANNEL NAME </span>
 
-                        <br />
-                        <input
-                            type="text"
-                            value={this.state.channel_name}
-                            onChange={this.update("channel_name")}
-                            className="channel-name-box"
-                        />
-                    </label>
-                    <br />
-                    <input
-                        type="submit"
-                        value="Create Channel"
-                        className="create-channel-button"
-                    ></input>
-                </form>
+                  <br />
+                  <input
+                    type="text"
+                    value={this.state.channel_name}
+                    onChange={this.update("channel_name")}
+                    className="server-name-box"
+                  />
+                </label>
+              </form>
             </div>
+            <div className="create-server-submit-bar">
+              <span className="back-button" onClick={this.props.closeModal}>
+                Back
+              </span>
+              <input
+                type="submit"
+                value="Create"
+                className="server-submit-button"
+                onClick={this.handleSubmit}
+              ></input>
+            </div>
+          </div>
         );
     }
 }
