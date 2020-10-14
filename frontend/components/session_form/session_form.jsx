@@ -134,15 +134,15 @@ class SessionForm extends React.Component {
         </div>
         <footer>
           <div class="personal-div">
-            <a href="https://www.linkedin.com/in/danielxgu/">
+            <a href="https://www.linkedin.com/in/danielxgu/" target="_blank">
               <img src="./linkedin.png"></img>
             </a>
 
-            <a href="http://www.estherbaek.com/">
+            <a href="http://www.estherbaek.com/" target="_blank">
               <img src="./personalsite.png"></img>
             </a>
 
-            <a href="https://github.com/DanyoGu/datcord">
+            <a href="https://github.com/DanyoGu/datcord" target="_blank">
               <img src="./github.svg"></img>
             </a>
           </div>
