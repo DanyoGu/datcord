@@ -113,7 +113,7 @@ class ChannelShow extends React.Component {
               <h1 className="channel-header"># {channel.channel_name}</h1>
               <div className="message-list">
                 <div className="message-list-header">
-                  <img src="channel-header.jpg" alt="" />
+                  <img src="channel-header.png" alt="" />
                   <br />
                   <span className="channel-welcome">
                     Welcome to #{channel.channel_name}

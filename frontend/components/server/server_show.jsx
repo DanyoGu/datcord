@@ -116,7 +116,7 @@ class ServerShow extends React.Component {
           ✉ Invite Code
         </div>
         <footer className="user-toolbar">
-          <img src="discord-logo-online.jpg" alt="" />
+          <img src="discord-logo-online.png" alt="" />
           <span>
             <span>{username}</span>
             <br />#{id}
