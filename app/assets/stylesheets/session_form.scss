@@ -171,16 +171,18 @@ footer {
 }
 
 .personal-div {
+    position: fixed;
     display: flex;
-    justify-content: center;
-    margin-bottom: 200px;
-    margin-left: 50px;
+    justify-content: space-between;
+    top: 75%;
+    left: 47%;
 }
 
 .personal-div a {
     filter: invert(100%);
     margin-left: 1%;
     margin-right: 1%;
+    padding: 10px;
 }
 
 

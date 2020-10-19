@@ -132,7 +132,7 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
           </form>
         </div>
-        <footer>
+
           <div class="personal-div">
             <a href="https://www.linkedin.com/in/danielxgu/" target="_blank">
               <img src="./linkedin.png"></img>
@@ -146,7 +146,7 @@ class SessionForm extends React.Component {
               <img src="./github.svg"></img>
             </a>
           </div>
-        </footer>
+
       </div>
     );
   }

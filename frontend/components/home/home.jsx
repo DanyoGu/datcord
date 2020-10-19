@@ -68,7 +68,7 @@ class Home extends React.Component {
             <span className="discord-logo">DATCORD</span>
           </div>
           <div className="sidebar">
-            <ul>
+            <ul className="server-list">
               <a href="/" className="tooltip">
                 <img src="/discord-logo.png" className="homelink" />
                 <span className="tooltiptext">Home</span>
@@ -143,7 +143,12 @@ class Home extends React.Component {
                   <JoinServerFormContainer closeModal={this.toggleJoinModal} />
                 </Modal>
               </div>
-
+              <div>
+                  <li onClick={this.logoutCurrentUser} className="tooltip">
+                      <i class="fas fa-sign-out-alt"></i>
+                      <span className="tooltiptext">Logout</span>
+                  </li>
+              </div>
             </ul>
           </div>
           <div>
