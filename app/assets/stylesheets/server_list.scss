@@ -13,7 +13,7 @@
     
   position: relative;
   background-color:#36393F;
-  width: 1000px;
+  width: 100%;
   overflow: none;
 
 }
@@ -133,7 +133,7 @@ html {
 }
 .top-bar{
   background-color: #202225;
-  width: 1000px;
+  width: 100%;
   height: 23px;
 }
 .discord-logo{
@@ -184,6 +184,7 @@ html {
 }
 .channel-bar{
   overflow: hidden;
+  
   footer{
     bottom: 0%;
     width: 71%;
@@ -191,7 +192,7 @@ html {
 }
 .members-bar{
   z-index: 2;
-
+  min-width: 650px;
 }
 .server-list:last-child{
   i{

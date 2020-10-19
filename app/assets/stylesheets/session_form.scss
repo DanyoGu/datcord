@@ -1,7 +1,7 @@
 .login-box{
     position: fixed;
-    top: 47%;
-    left: 51%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 575px;
     height: 375px;
@@ -173,9 +173,8 @@ footer {
 .personal-div {
     position: fixed;
     display: flex;
-    justify-content: space-between;
     top: 75%;
-    left: 47%;
+    left: 45%;
 }
 
 .personal-div a {
