@@ -138,7 +138,7 @@ class SessionForm extends React.Component {
               <img src="./linkedin.png"></img>
             </a>
 
-            <a href="http://www.estherbaek.com/" target="_blank">
+            <a href="https://danyogu.github.io/personalsite/" target="_blank">
               <img src="./personalsite.png"></img>
             </a>
 
